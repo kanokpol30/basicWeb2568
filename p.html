@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neo Dark Form</title>
+
+  <style>
+    /* ===========================
+       🌑 พื้นหลัง Dark Neo Minimal
+       =========================== */
+    body {
+      font-family: "Prompt", sans-serif;
+      background: linear-gradient(135deg, #111 0%, #1b1b1b 40%, #0e0e0e 100%);
+      color: #e4e4e4;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px;
+    }
+
+    /* ===========================
+       กล่องฟอร์มเฟี้ยวๆ
+       =========================== */
+    .form-container {
+      width: 100%;
+      max-width: 650px;
+      padding: 35px;
+      background: rgba(25, 25, 30, 0.88);
+      border-radius: 16px;
+      border: 1px solid #2f2f2f;
+      box-shadow: 0 0 25px rgba(0,0,0,0.35);
+    }
+
+    /* ===========================
+       หัวข้อเรียบเท่
+       =========================== */
+    h2 {
+      text-align: center;
+      margin-bottom: 28px;
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+    /* ===========================
+       Label คมชัด ไม่เรืองแสง
+       =========================== */
+    label {
+      font-size: 15px;
+      font-weight: 600;
+      color: #d0d0d0;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    /* ===========================
+       อินพุตมินิมอลแบบเท่
+       =========================== */
+    input {
+      width: 100%;
+      padding: 13px;
+      margin-top: 5px;
+      background: #1f1f26;
+      border: 1px solid #333;
+      border-radius: 8px;
+      font-size: 15px;
+      color: #eaeaea;
+      outline: none;
+      transition: 0.25s;
+    }
+
+    input:focus {
+      border-color: #6a5acd;
+      box-shadow: 0 0 8px rgba(106, 90, 205, 0.25);
+    }
+
+    /* ===========================
+       Checkbox ปรับเรียบ
+       =========================== */
+    input[type="checkbox"] {
+      width: auto;
+      transform: scale(1.2);
+      cursor: pointer;
+      accent-color: #6a5acd;
+      margin-right: 8px;
+    }
+
+    /* ===========================
+       Range Slider เท่เรียบ
+       =========================== */
+    input[type="range"] {
+      width: 80%;
+      cursor: pointer;
+      appearance: none;
+      background: transparent;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 5px;
+      background: #2e2e2e;
+      border-radius: 4px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      appearance: none;
+      height: 16px;
+      width: 16px;
+      background: #6a5acd;
+      border-radius: 50%;
+      margin-top: -5px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    input[type="range"]::-webkit-slider-thumb:hover {
+      background: #8378ff;
+    }
+
+    .range-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .range-value {
+      width: 20%;
+      text-align: right;
+      font-size: 16px;
+      font-weight: 600;
+      color: #b4b4ff;
+    }
+
+    /* ===========================
+       ปุ่มเท่แบบเฟี้ยวพอดี
+       =========================== */
+    .button-container {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background: #6a5acd;
+      border: none;
+      padding: 14px 0;
+      width: 50%;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.25s;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background: #7a6bfd;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(122, 107, 253, 0.3);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="form-container">
+    <h2>REGISTER FORM</h2>
+
+    <form id="myForm">
+
+      <div class="form-group">
+        <label for="name">ชื่อ - นามสกุล</label>
+        <input type="text" id="name" placeholder="พิมพ์ชื่อของคุณ..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">อีเมล</label>
+        <input type="email" id="email" placeholder="กรอกอีเมล..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">รหัสผ่าน</label>
+        <input type="password" id="password" placeholder="ตั้งรหัสผ่าน..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="tel">เบอร์โทรศัพท์</label>
+        <input type="tel" id="tel" placeholder="กรอกเบอร์โทรศัพท์..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">วันเดือนปีเกิด</label>
+        <input type="date" id="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="color">สีโปรดของคุณ</label>
+        <input type="color" id="color" value="#6a5acd">
+      </div>
+
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="terms"> ยอมรับเงื่อนไขการใช้งาน
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label for="file">อัปโหลดภาพโปรไฟล์</label>
+        <input type="file" id="file" accept="image/*">
+      </div>
+
+      <div class="form-group">
+        <label for="age">อายุ (ปรับเลื่อน)</label>
+        <div class="range-container">
+          <input type="range" id="age" min="18" max="100" value="25">
+          <span class="range-value" id="rangeValue">25</span>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <input type="submit" value="ยืนยัน">
+        <input type="reset" value="ล้างข้อมูล">
+      </div>
+
+    </form>
+  </div>
+
+  <script>
+    const rangeInput = document.getElementById('age');
+    const rangeValue = document.getElementById('rangeValue');
+    rangeInput.addEventListener('input', () => {
+      rangeValue.textContent = rangeInput.value;
+    });
+  </script>
+
+</body>
+</html>
