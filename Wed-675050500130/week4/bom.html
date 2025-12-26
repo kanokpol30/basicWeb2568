@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - BOM Project</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            border: 2px solid #000;
+            padding: 35px 45px;
+            text-align: center;
+            width: 360px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            background-color: #000;
+            color: #fff;
+            border: 2px solid #000;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 id="greeting">สวัสดีคุณ</h1>
+
+        <button onclick="showUserInfo()">ข้อมูลผู้ใช้</button>
+        <button onclick="refreshPage()">รีเฟรชหน้า</button>
+        <button onclick="openNewWindow()">เปิดหน้าต่างใหม่</button>
+    </div>
+
+    <script>
+        // ถามชื่อเมื่อโหลดหน้าเว็บ
+        const userName = window.prompt("กรุณาใส่ชื่อของคุณ");
+        if (userName) {
+            document.getElementById("greeting").innerText = `สวัสดีคุณ ${userName}`;
+        }
+
+        // แสดงข้อมูล BOM
+        function showUserInfo() {
+            alert(
+                `ข้อมูลผู้ใช้
+------------------
+User Agent: ${navigator.userAgent}
+Language: ${navigator.language}
+Screen Width: ${screen.width}
+Screen Height: ${screen.height}`
+            );
+        }
+
+        // รีเฟรชหน้า
+        function refreshPage() {
+            location.reload();
+        }
+
+        // เปิดหน้าใหม่
+        function openNewWindow() {
+            window.open("https://google.com", "_blank");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+    body{
+        background-color: black;
+    }
+    p{
+        color: brown;
+    }
+    
+    
+</style>
+    </head>
+<body>
+    <input id="msg-input" placeholder="กรอกชื่อผู้ใช้"type= "text">
+    <p id="show-msg">ยินดีต้อนรับ: </p>
+    <select id="select-input">
+    
+     
+
+        <option>เลือกไรก็เลือกอย่าเรื่องมาก</option>
+        <option>JavaScript</option>
+        <option>Python</option>
+        <option>Go</option>
+        
+    </select>
+    <p id="show-select-msg">ยินดีต้อนรับ:</p>
+    <script>
+        
+        const msgInputElement = document.getElementById('msg-input')
+
+        msgInputElement.addEventListener("input",function() {
+            const msg = this.value
+            const showMsgElement = document.getElementById('show-msg')
+            showMsgElement.innerText = 'ยินดีต้อนรับ' + msg
+        })
+
+        const msgSelectElement = document.getElementById('select-input')
+        msgSelectElement.addEventListener("change",function() {
+            const msg = this.value
+            const showMsgElement = document.getElementById('show-select-msg')
+            showMsgElement.innerText = 'เลือกภาษา' + msg
+        })
+        
+        
+    </script>
+
+</body>
+</html>

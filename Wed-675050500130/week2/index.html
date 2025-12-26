@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ทดสอบ Web Event</title>
+    <style>
+         body{
+            background-color: yellow;
+        }
+        input{
+            height: 50px;
+            width: 300px;
+            border-radius: 10px;
+
+        }
+    </style>
+<style>
+    h2{
+        color: red;
+        font-size: 50px;
+        text-align: center;
+    }
+    P{
+        color: brown;
+        font-size: 70px;
+
+    }
+    select {
+        font-size: 20px;
+        color: blue;
+        text-align: center;
+        border-radius: 20px;
+        background-color: red;
+        
+    }
+    
+    </style>
+</head>
+
+<body>
+    <h2>ทดสอบการอ่านชื่อจาก input </h2>
+    <p id="show-msg">อ่านหาพ่อง: </p>
+    <input id="msg-input" placeholder="กรอกไรมึงก็กรอกไปเหอะวะ"type= "text">
+
+    <h2>ทดสอบการเลือกแบบ Select</h2>
+    <p id="show-select-msg">อ่านหาแม่:</p>
+    <select id="select-input">
+        <option>เลือกไรก็เลือกอย่าเรื่องมาก</option>
+        <option>ตัวเลือก1</option>
+        <option>เรื่องมากนะไอสัส</option>
+        <option>เปิดควยไรเยอะ</option>
+        <option>อีทุ</option>
+        <option>โย</option>
+    </select>
+    
+    <script>
+        const msgInputElement = document.getElementById('msg-input')
+
+        msgInputElement.addEventListener("input",function() {
+            const msg = this.value
+            const showMsgElement = document.getElementById('show-msg')
+            showMsgElement.innerText = 'ข้อความที่มึงจะอ่าน' + msg
+        })
+
+        const msgSelectElement = document.getElementById('select-input')
+        msgSelectElement.addEventListener("input",function() {
+            const msg = this.value
+            const showMsgElement = document.getElementById('show-select-msg')
+            showMsgElement.innerText = 'ข้อความที่มึงจะอ่าน' + msg
+        })
+        
+        
+    </script>
+</body>
+
+</html>
+
+ 

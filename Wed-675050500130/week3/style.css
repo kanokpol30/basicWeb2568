@@ -1,0 +1,54 @@
+
+ 
+ body {
+     background-color: rgb(250, 152, 6);
+ }
+
+ .header-text {
+     text-align: center;
+     color: #c06262;
+ }
+
+ .header-container {
+     margin-top: 1%;
+     background-color: rgb(0, 0, 0);
+     padding: 10%;
+     border-radius: 10px;
+     width: 25%;
+
+
+
+ }
+
+ .flex-header {
+     display: flex;
+     justify-content: center;
+ }
+
+ .img-container {
+     padding: 2%;
+     justify-content: center;
+
+
+ }
+
+ .charm-regular {
+     font-family: "Charm", cursive;
+     font-weight: 400;
+     font-style: normal;
+ }
+
+ .nav-menu-container {
+     background-color: aliceblue;
+     text-align: center;
+     margin: 1%;
+     margin-top: 1%;
+     margin-bottom: 1%;
+ }
+
+ .nav-menu-item {
+     margin-left: 1%;
+     margin-right: 1%;
+ }
+
+ 
